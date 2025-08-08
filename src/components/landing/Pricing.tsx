@@ -66,10 +66,10 @@ export function Pricing() {
     <section id="pricing" className="py-24 bg-muted/30">
       <div className="container px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold font-sora mb-4">
-            Simple <span className="bg-gradient-primary bg-clip-text text-transparent">Pricing</span>
+          <h2 className="text-3xl md:text-5xl font-bold font-presto mb-4 text-foreground drop-shadow-lg">
+            Simple <span className="bg-gradient-primary bg-clip-text text-transparent filter brightness-125">Pricing</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/90 max-w-2xl mx-auto drop-shadow-md">
             Choose the perfect plan for your video analysis needs
           </p>
         </div>
@@ -103,10 +103,10 @@ export function Pricing() {
                 
                 {/* Header */}
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold font-sora mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold font-presto mb-2">{plan.name}</h3>
                   <p className="text-muted-foreground mb-4">{plan.description}</p>
                   <div className="flex items-baseline">
-                    <span className="text-4xl font-bold font-sora">{plan.price}</span>
+                    <span className="text-4xl font-bold font-presto">{plan.price}</span>
                     {plan.price !== 'Free' && (
                       <span className="text-muted-foreground ml-2">/{plan.period}</span>
                     )}

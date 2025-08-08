@@ -40,10 +40,10 @@ export function Testimonials() {
     <section className="py-24">
       <div className="container px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold font-sora mb-4">
-            Trusted by <span className="bg-gradient-primary bg-clip-text text-transparent">Creators</span>
+          <h2 className="text-3xl md:text-5xl font-bold font-presto mb-4 text-foreground drop-shadow-lg">
+            Trusted by <span className="bg-gradient-primary bg-clip-text text-transparent filter brightness-125">Creators</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/90 max-w-2xl mx-auto drop-shadow-md">
             See how content creators and marketers are transforming their video performance
           </p>
         </div>
@@ -60,7 +60,7 @@ export function Testimonials() {
                 </div>
                 
                 {/* Content */}
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-foreground/90 mb-6 leading-relaxed drop-shadow-sm">
                   "{testimonial.content}"
                 </p>
                 
@@ -72,9 +72,9 @@ export function Testimonials() {
                     className="w-10 h-10 rounded-full object-cover"
                   />
                   <div>
-                    <div className="font-semibold text-sm">{testimonial.name}</div>
-                    <div className="text-xs text-muted-foreground">{testimonial.role}</div>
-                    <div className="text-xs text-primary">{testimonial.company}</div>
+                    <div className="font-semibold text-sm text-foreground">{testimonial.name}</div>
+                    <div className="text-xs text-foreground/70">{testimonial.role}</div>
+                    <div className="text-xs text-primary font-medium">{testimonial.company}</div>
                   </div>
                 </div>
                 

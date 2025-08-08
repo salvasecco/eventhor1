@@ -28,15 +28,15 @@ export function About() {
     <section id="about" className="py-24 bg-muted/30">
       <div className="container px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold font-sora mb-6">
-            About <span className="bg-gradient-primary bg-clip-text text-transparent">Eventhor</span>
+          <h2 className="text-3xl md:text-5xl font-bold font-presto mb-6 text-foreground drop-shadow-lg">
+            About <span className="bg-gradient-primary bg-clip-text text-transparent filter brightness-125">Eventhor</span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+          <p className="text-xl text-foreground/90 leading-relaxed mb-8 drop-shadow-md">
             We believe every creator deserves access to professional-grade video analysis. 
             Our mission is to democratize content optimization through cutting-edge AI technology, 
             making data-driven video creation accessible to everyone.
           </p>
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-foreground/80">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-primary rounded-full" />
               <span>Founded in 2024</span>
@@ -62,10 +62,10 @@ export function About() {
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-lg font-semibold font-sora mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-semibold font-presto mb-3 group-hover:text-primary transition-colors text-foreground">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-foreground/80 text-sm leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -75,8 +75,8 @@ export function About() {
 
         {/* Technology Stack */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold font-sora mb-8">Powered by Leading AI Technology</h3>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+          <h3 className="text-2xl font-semibold font-presto mb-8 text-foreground">Powered by Leading AI Technology</h3>
+          <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
             {['GPT-4', 'AWS Rekognition', 'Deepgram', 'OpenAI', 'TensorFlow'].map((tech) => (
               <div key={tech} className="text-lg font-medium bg-card/30 px-4 py-2 rounded-lg border border-border/30">
                 {tech}

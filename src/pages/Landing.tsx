@@ -6,12 +6,12 @@ import { Pricing } from '@/components/landing/Pricing';
 import { Testimonials } from '@/components/landing/Testimonials';
 import { About } from '@/components/landing/About';
 import { Footer } from '@/components/landing/Footer';
-import { DynamicBackground } from '@/components/shared/DynamicBackground';
+import { BlackHoleBackground } from '@/components/shared/BlackHoleBackground';
 
 export default function Landing() {
   return (
     <div className="min-h-screen bg-background relative">
-      <DynamicBackground />
+      <BlackHoleBackground />
       <Header />
       <Hero />
       <HowItWorks />

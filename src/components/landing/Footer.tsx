@@ -1,6 +1,6 @@
-import { Zap, Twitter, Linkedin, Github, Youtube } from 'lucide-react';
+import { Twitter, Linkedin, Github, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ThemeToggle } from '@/components/shared/ThemeToggle';
+import logoImage from '@/assets/bitmap-3.png';
 
 export function Footer() {
   const footerLinks = {
@@ -44,11 +44,15 @@ export function Footer() {
         <div className="grid lg:grid-cols-6 gap-8 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
+            <Link to="/" className="flex items-center space-x-3 mb-4">
               <div className="relative">
-                <Zap className="h-8 w-8 text-primary animate-pulse animate-text-glow" />
+                <img 
+                  src={logoImage} 
+                  alt="Eventhor Logo" 
+                  className="h-8 w-auto filter brightness-110 contrast-110"
+                />
               </div>
-              <span className="font-sora text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <span className="font-presto text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 Eventhor
               </span>
             </Link>
@@ -95,8 +99,7 @@ export function Footer() {
             © 2024 Eventhor. All rights reserved.
           </p>
           <div className="flex items-center space-x-4">
-            <span className="text-muted-foreground text-sm">Theme:</span>
-            <ThemeToggle />
+            <span className="text-foreground/70 text-sm">Powered by AI-driven analytics</span>
           </div>
         </div>
       </div>

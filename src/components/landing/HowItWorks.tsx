@@ -23,13 +23,15 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-muted/30">
+    <section id="how-it-works" className="py-24 bg-background/95 relative">
+      {/* Smooth gradient at top */}
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-background to-transparent" />
       <div className="container px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold font-sora mb-4">
-            How It <span className="bg-gradient-primary bg-clip-text text-transparent">Works</span>
+          <h2 className="text-3xl md:text-5xl font-bold font-presto mb-4 text-foreground drop-shadow-lg">
+            How It <span className="bg-gradient-primary bg-clip-text text-transparent filter brightness-125">Works</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/90 max-w-2xl mx-auto drop-shadow-md">
             Three simple steps to unlock your video's full potential
           </p>
         </div>

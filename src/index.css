@@ -4,7 +4,7 @@
 
 /* Eventhor Design System - Advanced glassmorphism theme */
 
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Presto+One:wght@400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -131,11 +131,15 @@
 
   body {
     @apply bg-background text-foreground transition-colors duration-300;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
   }
   
-  .font-sora {
-    font-family: 'Sora', sans-serif;
+  .font-presto {
+    font-family: 'Presto One', sans-serif;
+  }
+  
+  .font-space {
+    font-family: 'Space Grotesk', sans-serif;
   }
 }
 
@@ -205,5 +209,110 @@
   /* Chart Containers */
   .chart-glow {
     filter: drop-shadow(0 0 10px hsl(var(--primary) / 0.3));
+  }
+  
+  /* Black Hole Animations - SIN ROTACIÓN PROBLEMÁTICA */
+  @keyframes blackHolePulse {
+    0% {
+      opacity: 0.8;
+      filter: brightness(0.9) contrast(1.3) saturate(1.4) hue-rotate(0deg);
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      filter: brightness(1.2) contrast(1.5) saturate(1.6) hue-rotate(5deg);
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 0.8;
+      filter: brightness(0.9) contrast(1.3) saturate(1.4) hue-rotate(0deg);
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes gravitationalWave {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.8;
+      border-width: 3px;
+    }
+    50% {
+      transform: scale(1.3);
+      opacity: 0.4;
+      border-width: 2px;
+    }
+    100% {
+      transform: scale(1.8);
+      opacity: 0;
+      border-width: 1px;
+    }
+  }
+  
+  @keyframes energyFeedback {
+    0% {
+      opacity: 0.3;
+      transform: scale(1);
+      filter: blur(0px);
+    }
+    25% {
+      opacity: 0.6;
+      transform: scale(1.1);
+      filter: blur(1px);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+      filter: blur(0px);
+    }
+    75% {
+      opacity: 0.5;
+      transform: scale(1.15);
+      filter: blur(2px);
+    }
+    100% {
+      opacity: 0.3;
+      transform: scale(1);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes lightAbsorption {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+  }
+  
+  @keyframes eventHorizonGlow {
+    0% {
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), inset 0 0 20px rgba(139, 92, 246, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 60px rgba(139, 92, 246, 0.6), inset 0 0 30px rgba(139, 92, 246, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), inset 0 0 20px rgba(139, 92, 246, 0.1);
+    }
+  }
+  
+  .gravitational-wave {
+    animation: gravitationalWave 4s ease-out infinite;
+  }
+  
+  .light-absorption {
+    animation: lightAbsorption 2s ease-in forwards;
+  }
+  
+  .event-horizon-glow {
+    animation: eventHorizonGlow 3s ease-in-out infinite;
+  }
+  
+  /* Gradiente radial para overlays */
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
   }
 }

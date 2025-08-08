@@ -44,10 +44,10 @@ export function Features() {
     <section id="features" className="py-24">
       <div className="container px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold font-sora mb-4">
-            Powerful <span className="bg-gradient-primary bg-clip-text text-transparent">Features</span>
+          <h2 className="text-3xl md:text-5xl font-bold font-presto mb-4 text-foreground drop-shadow-lg">
+            Powerful <span className="bg-gradient-primary bg-clip-text text-transparent filter brightness-125">Features</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/90 max-w-2xl mx-auto drop-shadow-md">
             Everything you need to create videos that captivate and convert
           </p>
         </div>

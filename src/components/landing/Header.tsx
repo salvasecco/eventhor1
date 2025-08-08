@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { ThemeToggle } from '@/components/shared/ThemeToggle';
 import { Link } from 'react-router-dom';
+import logoImage from '@/assets/bitmap-3.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,11 +11,15 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2 group">
+        <Link to="/" className="flex items-center space-x-3 group">
           <div className="relative">
-            <Zap className="h-8 w-8 text-primary animate-pulse animate-text-glow" />
+            <img 
+              src={logoImage} 
+              alt="Eventhor Logo" 
+              className="h-10 w-auto filter brightness-110 contrast-110 hover:brightness-125 transition-all duration-300"
+            />
           </div>
-          <span className="font-sora text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+          <span className="font-presto text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             Eventhor
           </span>
         </Link>
@@ -35,7 +39,6 @@ export function Header() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center space-x-4">
-          <ThemeToggle />
           <Link to="/auth">
             <Button variant="hero" size="sm" className="shadow-glow">
               Start Analysis
@@ -45,7 +48,6 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center space-x-2">
-          <ThemeToggle />
           <Button
             variant="ghost"
             size="icon"
